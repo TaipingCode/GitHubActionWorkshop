@@ -30,10 +30,10 @@ jobs:
         steps:
             - name: Get Date
               id: s001
-              run: echo "CURR_DATE=$(date) > $GITHUB_OUTPUT"
+              run: echo "CURR_DATE=$(date) >> $GITHUB_OUTPUT"
             - name: Ship it
               uses: mscoutermarsh/cowsays-action@master
               with:
-                text: 'testing! ${{ steps.s001.outputs.CURR_DATE}}'
+                text: 'testing! ${{ steps.s001.outputs.CURR_DATE }}'
                 color: 'cyan'
 
