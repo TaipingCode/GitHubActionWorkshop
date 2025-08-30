@@ -28,10 +28,11 @@ jobs:
         name: Cowsays
         runs-on: ubuntu-latest
         steps:
-            - name: Get Date
-              id: s001
+            - id: s000
+              run: echo "Current time in Github $(date), ${GITHUB_OUTPUT}"
+            - id: s001
               run: echo "CURR_DATE=$(date) >> $GITHUB_OUTPUT"
-            - name: Ship it
+            - id: s002
               uses: mscoutermarsh/cowsays-action@master
               with:
                 text: 'testing! ${{ steps.s001.outputs.CURR_DATE }}'
