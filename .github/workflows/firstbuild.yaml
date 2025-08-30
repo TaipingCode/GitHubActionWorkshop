@@ -22,3 +22,5 @@ jobs:
               run: echo "Current time in Github is $(date)"
             - id: s01
               run: ls
+            - id: s02
+              run: cat hello_world.txt
