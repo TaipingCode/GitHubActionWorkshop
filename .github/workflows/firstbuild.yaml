@@ -35,6 +35,6 @@ jobs:
             - id: s002
               uses: mscoutermarsh/cowsays-action@master
               with:
-                text: 'testing! ${{ steps.s001.outputs.CURR_DATE }}'
+                text: 'testing! ${{ steps.s001.outputs.CURR_DATE }}, ${{ github.ref }}, ${{ github.repository }}'
                 color: 'cyan'
 
