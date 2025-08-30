@@ -20,4 +20,4 @@ jobs:
         steps: 
             - id: s00
             ## running some shell bash command
-            run: echo "Current time in Github is ${date}"
+            run: echo "Current time in Github is $(date)"
