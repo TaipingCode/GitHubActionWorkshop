@@ -28,9 +28,12 @@ jobs:
         name: Cowsays
         runs-on: ubuntu-latest
         steps:
+            - name: Get Date
+              id: s001
+              run: echo "CURR_DATE=$(date) > $GITHUB_OUTPUT"
             - name: Ship it
               uses: mscoutermarsh/cowsays-action@master
               with:
-                text: 'testing!'
-                color: 'magenta'
+                text: 'testing! ${{ steps.s001.outputs.CURR_DATE}}'
+                color: 'cyan'
 
